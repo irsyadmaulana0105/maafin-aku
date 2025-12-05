@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Maafku</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .letter-container {
+            max-width: 700px;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            position: relative;
+            animation: slideIn 1s ease-out;
+        }
+
+        .letter-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .letter-header h1 {
+            color: #d63384;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+        }
+
+        .letter-content {
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        .letter-content p {
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInText 1s ease-out forwards;
+        }
+
+        .letter-content p:nth-child(1) { animation-delay: 0.3s; }
+        .letter-content p:nth-child(2) { animation-delay: 0.6s; }
+        .letter-content p:nth-child(3) { animation-delay: 0.9s; }
+        .letter-content p:nth-child(4) { animation-delay: 1.2s; }
+        .letter-content p:nth-child(5) { animation-delay: 1.5s; }
+
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+            color: #d63384;
+            font-size: 1.2em;
+        }
+
+        .btn-next {
+            display: block;
+            margin: 30px auto 0;
+            background: #d63384;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 2s forwards;
+        }
+
+        .btn-next:hover {
+            background: #b02a6e;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(214, 51, 132, 0.4);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .letter-container {
+                padding: 30px 20px;
+            }
+            .letter-header h1 {
+                font-size: 2em;
+            }
+            .letter-content {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="letter-container">
+        <div class="letter-header">
+            <h1>Untuk Kamu</h1>
+            <p class="date">Dibuat tanpa paksaan</p>
+        </div>
+
+        <div class="letter-content">
+            <p>Hai sayang,</p>
+            
+            <p>Aku minta maaf ya karena seharian nggak ada kabar dan nggak nyariin kamu. Aku tahu itu bikin kamu kecewa dan mungkin bikin kamu ngerasa sendirian. Itu salah aku.</p>
+            
+            <p>Aku berharap kamu sekarang udah sedikit lebih baik. Kalau ada yang lagi kamu rasain, atau ada hal yang bikin kamu kepikiran, aku di sini. Aku pengen dengar semuanya kalau kamu mau cerita. Aku nggak mau kamu nanggung apa pun sendirian.</p>
+            
+            <p>Maafin aku ya, sayang. Aku bakal berusaha lebih baik dan lebih peka sama kamu. Kamu penting banget buat aku, dan aku nggak mau bikin kamu sedih lagi.</p>
+            
+            <p>Maafin aku ya sayang...</p>
+        </div>
+
+        <div class="signature">
+            Dari aku,<br>
+            Love you cinta ❤️
+        </div>
+
+        <button class="btn-next" onclick="nextPage()">Lanjut →</button>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = 'memories.html';
+        }
+    </script>
+</body>
+</html>

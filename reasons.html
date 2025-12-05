@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenapa Kamu Spesial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            margin-bottom: 50px;
+            animation: fadeInDown 1s ease-out;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .reasons-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        .reason-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .reason-card:nth-child(1) { animation-delay: 0.2s; }
+        .reason-card:nth-child(2) { animation-delay: 0.4s; }
+        .reason-card:nth-child(3) { animation-delay: 0.6s; }
+        .reason-card:nth-child(4) { animation-delay: 0.8s; }
+        .reason-card:nth-child(5) { animation-delay: 1s; }
+        .reason-card:nth-child(6) { animation-delay: 1.2s; }
+        .reason-card:nth-child(7) { animation-delay: 1.4s; }
+        .reason-card:nth-child(8) { animation-delay: 1.6s; }
+
+        .reason-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .reason-icon {
+            font-size: 3em;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .reason-text {
+            flex: 1;
+        }
+
+        .reason-text h3 {
+            color: #d63384;
+            margin-bottom: 8px;
+            font-size: 1.3em;
+        }
+
+        .reason-text p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .btn-next {
+            display: block;
+            margin: 40px auto 0;
+            background: white;
+            color: #f5576c;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-next:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+                margin-bottom: 30px;
+            }
+            .reason-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .reason-icon {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PESAN</h1>
+
+        <div class="reasons-container">
+            <div class="reason-card">
+                <div class="reason-text">
+                    <h3>Harapanku</h3>
+                    <p>Aku cuma punya satu harapan kecil buat kita ke depannya.
+Kalau suatu saat nanti aku lupa atau lalai lagi, aku harap kamu bisa ingetin aku baik-baik. Aku nggak mau bikin kamu marah atau sedih, dan aku pengen kita sama-sama belajar buat komunikasi lebih tenang.
+
+Dan buat diriku sendiri, aku janji bakal berusaha jadi lebih baik—lebih perhatian, lebih peka sama kamu, dan nggak ngulangin kesalahan yang bikin kamu kecewa.
+
+Aku pengen hubungan kita maju bareng, saling ngingetin, saling ngerti, dan nggak gampang kebawa emosi. Karena kamu itu penting buat aku, dan aku serius pengen jaga semuanya lebih baik lagi.</p>
+                </div>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-text">
+                    <h3>jadi</h3>
+                    <p>Kamu pasti pahamm apa yang dimaksudku, jadi mulai besok jangan marah kalo ngga suka bilang</p>
+                </div>
+            </div>
+
+
+        <button class="btn-next" onclick="nextPage()">Terakhir →</button>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = 'final.html';
+        }
+    </script>
+</body>
+</html>
